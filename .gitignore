@@ -1,6 +1,5 @@
 # General
 .DS_Store
-.env
 
 # Binaries for programs and plugins
 *.exe
@@ -29,3 +28,4 @@ package-lock.json
 
 # Initialized by cli for local testing
 /supabase
+config.bat
