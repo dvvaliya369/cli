@@ -1,6 +1,5 @@
 # General
 .DS_Store
-.env
 
 # Binaries for programs and plugins
 *.exe
@@ -32,3 +31,4 @@ package-lock.json
 
 # Claude
 .claude
+config.bat
