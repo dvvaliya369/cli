@@ -127,7 +127,8 @@ func MigrateShadowDatabase(ctx context.Context, container string, fsys afero.Fs,
 		return err
 	}
 	defer conn.Close(context.Background())
-	if err := start.SetupDatabase(ctx, conn, container[:12], os.Stderr, fsys); err != nil {
+	// Use container ID directly instead of truncated version to match storage migration lookup
+	if err := start.SetupDatabase(ctx, conn, container, os.Stderr, fsys); err != nil {
 		return err
 	}
 	if _, err := conn.Exec(ctx, CREATE_TEMPLATE); err != nil {
